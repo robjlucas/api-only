@@ -23,3 +23,8 @@ add_action('parse_query', 'disable_search');
 // Some features must be explicitly enabled in the theme.
 // See https://developer.wordpress.org/reference/functions/add_theme_support/
 add_theme_support('post-thumbnails');
+
+function force_404() {
+  status_header( 404 );
+}
+add_action('wp', 'force_404');
