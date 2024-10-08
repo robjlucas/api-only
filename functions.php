@@ -19,3 +19,7 @@ function disable_search($query, $error = true) {
   }
 }
 add_action('parse_query', 'disable_search');
+
+// Some features must be explicitly enabled in the theme.
+// See https://developer.wordpress.org/reference/functions/add_theme_support/
+add_theme_support('post-thumbnails');
